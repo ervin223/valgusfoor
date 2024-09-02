@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="valgusfloor.MainPage"
+             BackgroundColor="White">
+
+    <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+        <Label x:Name="StatusLabel"
+               Text="Светофор"
+               FontSize="Large"
+               HorizontalOptions="Center"
+               Margin="0, 20, 0, 20" />
+
+        <Frame x:Name="RedLight"
+               BackgroundColor="Gray"
+               CornerRadius="100"
+               HeightRequest="100"
+               WidthRequest="250"
+               HorizontalOptions="Center">
+            <Label Text="Punane"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   FontSize="Large"
+                   TextColor="White"/>
+        </Frame>
+
+        <Frame x:Name="YellowLight"
+               BackgroundColor="Gray"
+               CornerRadius="100"
+               HeightRequest="100"
+               WidthRequest="250"
+               HorizontalOptions="Center">
+            <Label Text="Kollane"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   FontSize="Large"
+                   TextColor="White"/>
+        </Frame>
+
+        <Frame x:Name="GreenLight"
+               BackgroundColor="Gray"
+               CornerRadius="100"
+               HeightRequest="100"
+               WidthRequest="250"
+               HorizontalOptions="Center">
+            <Label Text="Roheline"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   FontSize="Large"
+                   TextColor="White"/>
+        </Frame>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Button Text="SISSE" Clicked="OnSwitchOnClicked" />
+            <Button Text="VÄLJA" Clicked="OnSwitchOffClicked" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
