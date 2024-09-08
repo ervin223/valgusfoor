@@ -75,7 +75,7 @@ public partial class MainPage : ContentPage
         {
             _greenLightOn = !_greenLightOn;
             GreenLight.BackgroundColor = _greenLightOn ? Colors.Green : Colors.Gray;
-            StatusLabel.Text = _greenLightOn ? "Иди!" : "Светофор включен";
+            StatusLabel.Text = _greenLightOn ? "Пошли" : "Светофор включен";
         }
         else
         {
