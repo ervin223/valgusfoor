@@ -50,9 +50,17 @@
                    TextColor="White"/>
         </Frame>
 
-        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-            <Button Text="SISSE" Clicked="OnSwitchOnClicked" />
-            <Button Text="VÄLJA" Clicked="OnSwitchOffClicked" />
+        <StackLayout>
+            <Button Text="Включить светофор" Clicked="OnSwitchOnClicked"/>
+            <Button Text="Выключить светофор" Clicked="OnSwitchOffClicked"/>
+
+            <Button Text="Сбросить огни" Clicked="OnResetButtonClicked"/>
+
+            <BoxView x:Name="RedLight" BackgroundColor="Gray" HeightRequest="100"/>
+            <BoxView x:Name="YellowLight" BackgroundColor="Gray" HeightRequest="100"/>
+            <BoxView x:Name="GreenLight" BackgroundColor="Gray" HeightRequest="100"/>
+
+            <Label x:Name="StatusLabel" Text="Светофор выключен" />
         </StackLayout>
     </StackLayout>
 </ContentPage>

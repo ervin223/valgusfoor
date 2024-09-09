@@ -11,6 +11,7 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
 
+        // Добавляем жесты для каждой лампы
         RedLight.GestureRecognizers.Add(new TapGestureRecognizer { Command = new Command(OnRedLightTapped) });
         YellowLight.GestureRecognizers.Add(new TapGestureRecognizer { Command = new Command(OnYellowLightTapped) });
         GreenLight.GestureRecognizers.Add(new TapGestureRecognizer { Command = new Command(OnGreenLightTapped) });
@@ -20,14 +21,14 @@ public partial class MainPage : ContentPage
     {
         _isOn = true;
         StatusLabel.Text = "Светофор включен";
-        ResetLights(); 
+        ResetLights();
     }
 
     private void OnSwitchOffClicked(object sender, EventArgs e)
     {
         _isOn = false;
         StatusLabel.Text = "Светофор выключен";
-        ResetLights(); 
+        ResetLights();
     }
 
     private void ResetLights()
@@ -81,5 +82,12 @@ public partial class MainPage : ContentPage
         {
             StatusLabel.Text = "Сначала включи светофор";
         }
+    }
+
+    // Новый метод для сброса всех огней
+    private void OnResetButtonClicked(object sender, EventArgs e)
+    {
+        ResetLights();
+        StatusLabel.Text = "Все огни сброшены";
     }
 }
